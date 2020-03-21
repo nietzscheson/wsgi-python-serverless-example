@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  wsgi:
+    build: 
+      context: ./wsgi
+      target: wsgi
+    ports:
+      - 5000:5000
+    volumes:
+      - ./wsgi:/var/www/app
+    command: python app.py
+    working_dir: /var/www/app
+    environment:
+      - FLASK_APP=/var/www/server/wsgi/app.py
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+
