@@ -19,12 +19,3 @@ FROM base as wsgi
 COPY requirements.txt .
 
 RUN pip install -r requirements.txt
-
-
-# COPY . /var/www/app
-# 
-# WORKDIR /var/www/app
-# 
-# RUN pip install -r requirements.txt
-# 
-# CMD python app.py
