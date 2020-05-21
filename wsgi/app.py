@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    name = request.args.get("name", "fight-covid-19")
+    name = request.args.get("name", "wsgi-python-serverless-example")
     return f'Hello, {escape(name)}!'
 
 if __name__ == "__main__":

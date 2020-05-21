@@ -8,7 +8,7 @@ RUN apk add --no-cache --update \
     py3-pip \
     && rm -rf /var/cache/apk/*
 
-RUN npm install -g firebase-tools@latest serverless
+RUN npm install -g serverless
 
 RUN pip3 install --upgrade pip
 

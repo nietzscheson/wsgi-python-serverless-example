@@ -1,3 +1,4 @@
 .env
 /wsgi/node_modules
 /wsgi/.serverless
+/api/__pycache__/*
